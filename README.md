@@ -1,4 +1,4 @@
-## Prerequisite
+<!-- ## Prerequisite
 Please make sure you have the following installed
 - [node](https://nodejs.org/en/download/current/)  (v15 or above)
 - [yarn](https://yarnpkg.com/)
@@ -82,4 +82,4 @@ There are 13 small functions for you to complete, while we've provided 5 complet
 When you are done with a challenge and want to test, simply run `yarn test` again and it will run the test suit against your code and show the result.
 
 
-## If you have any questions, defintely reach out and ask us on slack.
+## If you have any questions, defintely reach out and ask us on slack. -->
