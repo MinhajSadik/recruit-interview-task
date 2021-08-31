@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Snake.module.css";
 
 const Config = {
