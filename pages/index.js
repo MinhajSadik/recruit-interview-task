@@ -102,6 +102,15 @@ const Snake = () => {
     return () => clearInterval(timer);
   }, [direction, food]);
 
+  // incrementTail function
+  const incrementTail = () => {
+    const head = snake[snake.length - 1];
+    const newTail = snake;
+
+    newTail.push(head);
+
+  }
+
   // update score whenever head touches a food
   useEffect(() => {
     const head = snake[0];
@@ -109,6 +118,9 @@ const Snake = () => {
       setScore((score) => {
         return score + 1;
       });
+      
+      //incrementTail function call
+      incrementTail();
 
       let newFood = getRandomCell();
       while (isSnake(newFood)) {
