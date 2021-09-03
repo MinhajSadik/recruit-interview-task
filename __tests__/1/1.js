@@ -38,7 +38,7 @@ test("Exercise 1.1: return company name from email address", () => {
 
 // given a person, return list of companies of her subordinates
 const exercise12 = (person) => {
-  
+  return person.subordinates.map((subordinate) => subordinate.email.split("@")[1].split(".")[0])
 }
 
 test("Exercise 1.2: given a person, return list of companies of her subordinates", () => {
