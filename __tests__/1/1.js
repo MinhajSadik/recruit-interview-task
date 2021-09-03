@@ -37,7 +37,9 @@ test("Exercise 1.1: return company name from email address", () => {
 });
 
 // given a person, return list of companies of her subordinates
-const exercise12 = (person) => {};
+const exercise12 = (person) => {
+  
+}
 
 test("Exercise 1.2: given a person, return list of companies of her subordinates", () => {
   expect(exercise12(CruzHarrell)).toEqual([
