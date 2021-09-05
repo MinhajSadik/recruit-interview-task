@@ -57,27 +57,27 @@ test("Exercise 1.2: given a person, return list of companies of her subordinates
   expect(exercise12(KatherineCohen)).toEqual([]);
 });
 
-// // given a person and gender, return number of subordinates of person of given gender
-// const example2 = (person, gender) => {
-//   return person.subordinates.filter(
-//     (subordinate) => subordinate.gender === gender
-//   ).length;
-// };
+// given a person and gender, return number of subordinates of person of given gender
+const example2 = (person, gender) => {
+  return person.subordinates.filter(
+    (subordinate) => subordinate.gender === gender
+  ).length;
+};
 
-// test("Example 2: given a person and gender, return number of subordinates of person of given gender", () => {
-//   expect(example2(CruzHarrell, "female")).toEqual(6);
-//   expect(example2(KatherineCohen, "male")).toEqual(0);
-// });
+test("Example 2: given a person and gender, return number of subordinates of person of given gender", () => {
+  expect(example2(CruzHarrell, "female")).toEqual(6);
+  expect(example2(KatherineCohen, "male")).toEqual(0);
+});
 
-// // given a person and [minAge, maxAge], return number of subordinates in that age range
-// const exercise21 = (person, [minAge, maxAge]) => {
+// given a person and [minAge, maxAge], return number of subordinates in that age range
+const exercise21 = (person, [minAge, maxAge]) => {
+  return person.subordinates.map((subordinate) => subordinate.age === person && subordinate )
+};
 
-// };
-
-// test("Exercise 2.1: given a person and [minAge, maxAge], return number of subordinates in that age range", () => {
-//   expect(exercise21(CruzHarrell, [21, 49])).toEqual(5);
-//   expect(exercise21(RoxanneSimmons, [55, 65])).toEqual(1);
-// });
+test("Exercise 2.1: given a person and [minAge, maxAge], return number of subordinates in that age range", () => {
+  expect(exercise21(CruzHarrell, [21, 49])).toEqual(5);
+  expect(exercise21(RoxanneSimmons, [55, 65])).toEqual(1);
+});
 
 // // given a person, return the names of subordinates who themselves have subordinates
 // const exercise22 = (person) => {};
