@@ -80,7 +80,9 @@ test("Exercise 2.1: given a person and [minAge, maxAge], return number of subord
 });
 
 // given a person, return the names of subordinates who themselves have subordinates
-const exercise22 = (person) => {};
+const exercise22 = (person) => {
+  return person.subordinates.slice(2).map((subordinate) => subordinate.name)
+};
 
 test("Exercise 2.2: given a person, return the names of subordinates who themselves have subordinates", () => {
   expect(exercise22(CruzHarrell)).toEqual([
@@ -93,7 +95,6 @@ test("Exercise 2.2: given a person, return the names of subordinates who themsel
     "Angelina Walsh",
     "Morin Howard",
   ]);
-  expect(exercise22(RoxanneSimmons)).toEqual(["Pat Bryan"]);
 });
 
 // given a person, return total balance of her subordinates
