@@ -112,7 +112,7 @@ test("Example 3: given a person, return total balance of her subordinates", () =
 
 // given a person, return average age of her subordinates
 const exercise31 = (person) => {
-  return person.subordinates.reduce((prev, user) => prev + user.age, 0) / person.subordinates.length;
+  return person.subordinates.reduce((prev, average) => prev + average.age, 0) / person.subordinates.length;
 };
 
 test("Exercise 3.1: given a person, return average age of her subordinates", () => {
