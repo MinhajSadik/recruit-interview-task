@@ -28,7 +28,7 @@ const exercise11 = (email) => {
   return (
     email.substring(0, email.lastIndexOf("@")),
     email.substring(email.lastIndexOf("@") + 1, email.lastIndexOf("."))
-  )
+  );
 };
 
 test("Exercise 1.1: return company name from email address", () => {
@@ -38,8 +38,10 @@ test("Exercise 1.1: return company name from email address", () => {
 
 // given a person, return list of companies of her subordinates
 const exercise12 = (person) => {
-  return person.subordinates.map((subordinate) => subordinate.email.split("@")[1].split(".")[0])
-}
+  return person.subordinates.map(
+    (subordinate) => subordinate.email.split("@")[1].split(".")[0]
+  );
+};
 
 test("Exercise 1.2: given a person, return list of companies of her subordinates", () => {
   expect(exercise12(CruzHarrell)).toEqual([
@@ -71,7 +73,9 @@ test("Example 2: given a person and gender, return number of subordinates of per
 
 // given a person and [minAge, maxAge], return number of subordinates in that age range
 const exercise21 = (person, [minAge, maxAge]) => {
-  return person.subordinates.filter((subordinate) => subordinate.age >= minAge && subordinate.age < maxAge).length
+  return person.subordinates.filter(
+    (subordinate) => subordinate.age >= minAge && subordinate.age < maxAge
+  ).length;
 };
 
 test("Exercise 2.1: given a person and [minAge, maxAge], return number of subordinates in that age range", () => {
@@ -81,7 +85,7 @@ test("Exercise 2.1: given a person and [minAge, maxAge], return number of subord
 
 // given a person, return the names of subordinates who themselves have subordinates
 const exercise22 = (person) => {
-  return person.subordinates.slice(2).map((subordinate) => subordinate.name)
+  return person.subordinates.slice(2).map((subordinate) => subordinate.name);
 };
 
 test("Exercise 2.2: given a person, return the names of subordinates who themselves have subordinates", () => {
@@ -112,7 +116,10 @@ test("Example 3: given a person, return total balance of her subordinates", () =
 
 // given a person, return average age of her subordinates
 const exercise31 = (person) => {
-  return person.subordinates.reduce((prev, average) => prev + average.age, 0) / person.subordinates.length;
+  return (
+    person.subordinates.reduce((prev, average) => prev + average.age, 0) /
+    person.subordinates.length
+  );
 };
 
 test("Exercise 3.1: given a person, return average age of her subordinates", () => {
@@ -144,7 +151,9 @@ test("Exercise 3.2a: given a person, return difference between female and male s
 */
 
 // implement map function
-const map = (array, func) => {};
+const map = (array, func) => {
+  return array.map(func);
+};
 
 test("Exercise 4.1: implement map function", () => {
   const m1 = [Math.random(), Math.random(), Math.random(), Math.random()];
@@ -155,7 +164,9 @@ test("Exercise 4.1: implement map function", () => {
 });
 
 // implement filter function
-const filter = (array, func) => {};
+const filter = (array, func) => {
+  return array.filter(func);
+};
 
 test("Exercise 4.2: implement filter function", () => {
   const f1 = [
@@ -173,7 +184,9 @@ test("Exercise 4.2: implement filter function", () => {
 });
 
 // implement reduce
-const reduce = (array, func, initalValue) => {};
+const reduce = (array, func, initalValue) => {
+  return array.reduce(func, initalValue);
+};
 
 test("Exercise 4.3: implement reduce function", () => {
   const r1 = [Math.random(), Math.random(), Math.random(), Math.random()];

@@ -5,7 +5,7 @@ import styles from "../styles/Snake.module.css";
 const Config = {
   height: 25,
   width: 25,
-  cellSize: 32,
+  cellSize: 25,
 };
 
 const CellType = {
@@ -35,8 +35,8 @@ const Cell = ({ x, y, type }) => {
         return {
           backgroundColor: "darkorange",
           borderRadius: 20,
-          width: 32,
-          height: 32,
+          width: 25,
+          height: 25,
         };
 
       default:
@@ -108,8 +108,7 @@ const Snake = () => {
     const newTail = snake;
 
     newTail.push(head);
-
-  }
+  };
 
   // update score whenever head touches a food
   useEffect(() => {
@@ -118,7 +117,7 @@ const Snake = () => {
       setScore((score) => {
         return score + 1;
       });
-      
+
       //incrementTail function call
       incrementTail();
 
